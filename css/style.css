@@ -16,6 +16,8 @@ body
     width: 100%;
     height: 250px;
     background-color: rgb(155, 155, 155);
+
+    z-index: 100;
 }
 
 .logo
@@ -37,6 +39,63 @@ body
     width: 100%;
     height: 35px;
     background-color: orange;
+    
+}
+
+.menu-item
+{
+    position: relative;
+    float: left;
+    width: 150px;
+    color: white;
+    height: calc(100% - 2px);
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.menu-item:hover
+{
+    background-color: rgb(204, 133, 0);
+    height: 110%;
+    padding-top: 9px;
+    border-bottom-right-radius: 5px;
+
+    box-shadow: black 3px 3px 5px;
+}
+
+.submenu
+{
+    position: absolute;
+    top: 46px;
+    left: 5px;
+    width: 180px;
+    /* background-color: white; */
+
+    display: none;
+    transition: 0.5;
+}
+
+.menu-item:hover .submenu
+{
+    display: block;
+}
+
+.submenu-item
+{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 35px;
+    color: black;
+    background-color: blueviolet;
+
+}
+
+.submenu-item:hover
+{
+    width: 110%;
+    background-color: rgb(79, 17, 138);
 }
 
 .conteudo

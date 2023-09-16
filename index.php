@@ -14,7 +14,30 @@
     <div class="logo">
         <img id="logo_site" src="images/corinthians.png">
     </div>
-    <div class="menu"></div>
+    <div class="menu">
+        <div id="menu-destaque"class="menu-item">
+            Estudante
+            <div class="submenu"></div>
+        </div>
+        <div class="menu-item">
+            Biblioteca
+            <div class="submenu">
+                <div class="submenu-item">
+                    Livros
+                </div>
+                <div class="submenu-item">
+                    Cadernos
+                </div>
+                <div class="submenu-item">
+                    Dicionarios
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            Serviços
+            <div class="submenu"></div>
+        </div>
+    </div>
     </div>
 
     <div class="conteudo"></div>
