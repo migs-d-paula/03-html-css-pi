@@ -98,6 +98,21 @@ body
     background-color: rgb(79, 17, 138);
 }
 
+.maxmenu-servicos {
+    position: absolute;
+    top: 40px;
+    left: -300px;
+    width: 600%;
+    height: 200px;
+    background-color: rgb(202, 202, 202);
+
+    display: none;
+}
+
+#i-maxmenu-servicos:hover .maxmenu-servicos {
+    display: block;
+}
+
 .conteudo
 {
     position: relative;
