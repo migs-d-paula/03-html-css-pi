@@ -50,7 +50,7 @@
 
             <?php
 
-            for($i = 0; $i <= 3; $i++)
+            for($i = 1; $i < 4; $i++)
             {
 
                 if ($i == 1)
@@ -68,12 +68,12 @@
             }
             ?>
 
-                <!-- <div class="carousel-item">
+                 <div class="carousel-item">
                     <img src="images/banner-game-02.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item active">
                     <img src="images/banner-game-03.png" class="d-block w-100" alt="...">
-                </div> -->
+                </div>
 
 
             </div>
@@ -84,9 +84,14 @@
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+            </button> 
             </div>
         </div>
+
+        <form action="" method="post">
+
+
+        </form>
     <footer>
         
     </footer>

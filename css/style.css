@@ -52,6 +52,10 @@ body
     text-align: center;
 
     transition: 0.3s;
+
+    box-sizing: unset;
+
+    z-index: 100;
 }
 
 .menu-item:hover
