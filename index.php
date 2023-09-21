@@ -86,10 +86,23 @@
                 <span class="visually-hidden">Next</span>
             </button> 
             </div>
-        </div>
-
-        <form action="" method="post">
-
+            <form action="banner.php" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Título</label>
+                <input name="campo-titulo" type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+                <textarea name="campo-descricao" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Imagem do Banner</label>
+                <input name="campo-imagem" class="form-control" type="file" id="formFile" accept=".png, .jpg">
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+            
+    </div>
 
         </form>
     <footer>
