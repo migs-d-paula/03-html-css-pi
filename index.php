@@ -50,9 +50,46 @@
 
             <?php
 
-            for($i = 1; $i < 4; $i++)
-            {
+            // for($i = 1; $i < 4; $i++)
+            // {
 
+            //     if ($i == 1)
+            //     {
+            //         $active = 'active';
+            //     }
+            //     else
+            //     {
+            //         $active = '';
+            //     }
+
+            //     echo '<div class="carousel-item ' . $active . '">';
+            //     echo '    <img src="images/banner-game-0' . $i . '.png" class="d-block w-100" alt="...">';
+            //     echo '</div>';
+            // }
+            ?>
+
+            <div class="carroussel-inner">
+
+            <?php
+
+            // Credenciais da Base de Dados:
+                $servidor = 'localhost';
+                $base = 'bd_publicidade';
+                $usuario = 'root';
+                $senha = '';
+
+            //     // Criar a CONEXÃO com a Base de Dados:
+                $conexao = new mysqli ($servidor, $usuario, $senha, $base);
+
+            //     // Criar e Excecutar a SQL para INSERIR os dados da tabela:
+                $sql = 'SELECT imagem from tbl_banners';
+                $resultado = $conexao->query($sql);
+
+                $active = '';
+                $i = 1;
+
+            while($imagem = $resultado->fetch_assoc())
+            {
                 if ($i == 1)
                 {
                     $active = 'active';
@@ -63,18 +100,18 @@
                 }
 
                 echo '<div class="carousel-item ' . $active . '">';
-                echo '    <img src="images/banner-game-0' . $i . '.png" class="d-block w-100" alt="...">';
+                echo '    <img src="images/' . $imagem['imagem'] . '" class="d-block w-100" alt="...">';
                 echo '</div>';
+
+                $i++;
             }
+
+            //Encerrar CONEXÃO com a Base de Dados:
+            $conexao->close();
+
             ?>
 
-                 <div class="carousel-item">
-                    <img src="images/banner-game-02.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item active">
-                    <img src="images/banner-game-03.png" class="d-block w-100" alt="...">
-                </div>
-
+            </div>
 
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -84,9 +121,11 @@
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
+
+
             </button> 
             </div>
-            <form action="banner.php" method="post">
+            <form action="banner.php" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Título</label>
                 <input name="campo-titulo" type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
